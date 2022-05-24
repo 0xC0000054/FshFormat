@@ -1,0 +1,232 @@
+#define RSCL32(a,b,c,d)   0x ## c ## d, 0x ## a ## b
+#define LC(a,b,c,d)       #d, #c, #b, #a
+#define RSCS32(a)         a, 0
+
+STRINGTABLE	DISCARDABLE
+BEGIN
+	16990,
+	"An integer is required between ^1 and ^2."
+END
+
+STRINGTABLE	DISCARDABLE
+BEGIN
+	16991,
+	"A decimal number is required between ^1 and ^2."
+END
+
+STRINGTABLE	DISCARDABLE
+BEGIN
+	16992,
+	"This plug-in requires Adobe Photoshop® ^1 or later functionality."
+END
+
+STRINGTABLE	DISCARDABLE
+BEGIN
+	16993,
+	"This plug-in is incompatible with this version of the host program."
+END
+
+STRINGTABLE	DISCARDABLE
+BEGIN
+	16994,
+	"the required suite \'^0\' is unavailable"
+END
+
+16000  PiPL  DISCARDABLE
+BEGIN
+	1, /* First byte must always be 1 */
+	0L, /* kCurrentPiPL Version */
+	   15L, /* Property count */
+	"MIB8", /* '8BIM' */
+	"dnik", /* 'kind' PIKindProperty */
+	0L, /* Index */
+	    4L, /* Length */
+	"FIB8", /* '8BIF' Photoshop Format plug-in */
+
+	"MIB8", /* '8BIM' */
+	"eman", /* 'name' PINameProperty */
+	0L, /* Index */
+	   24L, /* Length */
+	"\024Electronic Arts® FSH\0\0\0",
+
+	"MIB8", /* '8BIM' */
+	"srev", /* 'vers' PIVersionProperty */
+	0L, /* Index */
+	    4L, /* Length */
+	0X00010000L, /* (Major << 16) | Minor */
+
+#if _WIN64
+	"MIB8", /* '8BIM' */
+	"4668", /* '8664' PIWin64X86CodeProperty */
+	0L, /* Index */
+	   12L, /* Length */
+	"PluginMain\0\0",
+#else
+	"MIB8", /* '8BIM' */
+	"68xw", /* 'wx86' PIWin32X86CodeProperty */
+	0L, /* Index */
+	   12L, /* Length */
+	"PluginMain\0\0",
+#endif
+
+	"MIB8", /* '8BIM' */
+	"mtsh", /* 'hstm' PITerminology */
+	0L, /* Index */
+	   36L, /* Length */
+	0L, /* Version */
+	"Fhsf", /* Class ID */
+	"llun", /* Event ID */
+	16000, /* Terminology ID */
+	"FshFmt FshFormat\0\0\0\0", /* Unique string */
+	    0, /* Padding */
+
+	"MIB8", /* '8BIM' */
+	"edom", /* 'mode' SupportedModes */
+	0L, /* Index */
+	    4L, /* Length */
+	0X0010, /* Supported modes */
+	0, /* Reserved */
+
+	"MIB8", /* '8BIM' */
+	"lbne", /* 'enbl' EnableInfoProperty */
+	0L, /* Index */
+	   32L, /* Length */
+	"in( PSHOP_ImageMode, RGBMode)\0\0\0",
+
+	"MIB8", /* '8BIM' */
+	"CTmf", /* 'fmTC' PIFormatFileTypeProperty */
+	0L, /* Index */
+	    8L, /* Length */
+	"F1B8",
+	"MIB8",
+
+	"MIB8", /* '8BIM' */
+	"xEdR", /* 'RdEx' PIReadExtProperty */
+	0L, /* Index */
+	    4L, /* Length */
+	"FSH ",
+
+	"MIB8", /* '8BIM' */
+	"yTdR", /* 'RdTy' PIReadTypesProperty */
+	0L, /* Index */
+	    8L, /* Length */
+	" FSH",
+	"    ",
+
+	"MIB8", /* '8BIM' */
+	"xErW", /* 'WrEx' PIWriteExtProperty */
+	0L, /* Index */
+	    4L, /* Length */
+	"FSH ",
+
+	"MIB8", /* '8BIM' */
+	"yTrW", /* 'WrTy' PIWriteTypesProperty */
+	0L, /* Index */
+	    8L, /* Length */
+	" FSH",
+	"    ",
+
+	"MIB8", /* '8BIM' */
+	"ftmf", /* 'fmtf' PIFmtFlagsProperty */
+	0L, /* Index */
+	    4L, /* Length */
+	0X0000003CL,
+
+	"MIB8", /* '8BIM' */
+	"zsxm", /* 'mxsz' PIFmtMaxSizeProperty */
+	0L, /* Index */
+	    4L, /* Length */
+	32767, /* Max x */
+	32767, /* Max y */
+
+	"MIB8", /* '8BIM' */
+	"hcxm", /* 'mxch' PIFmtMaxChannelsProperty */
+	0L, /* Index */
+	   24L, /* Length */
+	0, 0, 0, 4,
+	0, 0, 0, 0,
+	0, 0, 0, 0,
+
+END
+
+16000  aete  DISCARDABLE
+BEGIN
+	1, /* First byte must always be 1 */
+	0X0001, /* majorVersion|minorVersion */
+	0, /* language */
+	0, /* script */
+	    1, /* Suite Count */
+	"\006FshFmt",
+	"\026Fsh File format plugin",
+	"Fhsf", /* Suite ID */
+	1, /* Suite level */
+	1, /* Suite version */
+	    0, /* Event Count */
+	    1, /* Class count */
+	"\023FshFmt formatPlugin",
+	"Fhsf",
+	"\026Fsh File format module",
+	    5, /* Property count */
+	"\015<Inheritance>",
+	"^#@c",
+	" tmF",
+	"\023parent class format",
+	0X1000, /* Class flags */
+	"\013radioSelect",
+	"Thsf",
+	"Tpmb",
+	"\012Fsh Format",
+	0X2000, /* Class flags */
+	"\010headerID",
+	"Dhsf",
+	"TXET",
+	"\015Fsh Header ID",
+	0X1000, /* Class flags */
+	"\011entryName",
+	"riDe",
+	"TXET",
+	"\016Fsh Entry Name",
+	0X1000, /* Class flags */
+	"\023fshWriteCompression",
+	"Whsf",
+	"loob",
+	"\024FshWrite Compression",
+	0X1000, /* Class flags */
+	"\013mipmapCount",
+	"Cpim",
+	"gnol",
+	"\025Embedded Mipmap Count",
+	0X1000, /* Class flags */
+	"\012mipPadding",
+	"Ppim",
+	"loob",
+	"\027Embedded Mipmap Padding",
+	0X1000, /* Class flags */
+	    0, /* Elements count */
+	0, /* Number of comparison ops (always 0) */
+	    1, /* Enum count */
+	"Tpmb",
+	    7, /* Alias count */
+	"\00624-bit",
+	"0Tmf",
+	"\02424-bit RGB (0:8:8:8)",
+	"\00632-bit",
+	"1Tmf",
+	"\02532-bit ARGB (8:8:8:8)",
+	"\004DXT1",
+	"2Tmf",
+	"\017DXT1 Compressed",
+	"\004DXT3",
+	"3Tmf",
+	"\017DXT3 Compressed",
+	"\01216-bit RGB",
+	"4Tmf",
+	"\02416-bit RGB (0:5:6:5)",
+	"\01316-bit ARGB",
+	"5Tmf",
+	"\02516-bit ARGB (1:5:5:5)",
+	"\01216-bit 4x4",
+	"6Tmf",
+	"\02516-bit ARGB (4:4:4:4)",
+END
+
