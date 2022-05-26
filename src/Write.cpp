@@ -155,17 +155,17 @@ static OSErr WriteImageDataImpl(FormatRecordPtr pb,
                     flags |= squish::kColourIterativeClusterFit;
                     flags |= squish::kColourMetricUniform;
 
-                    squish::CompressImage(reinterpret_cast<squish::u8*>(outBuf), dxtWidth, dxtWidth, compressedData, flags);
+                    squish::CompressImage(reinterpret_cast<squish::u8*>(outBuf), dxtWidth, dxtHeight, compressedData, flags);
                 }
                 else
                 {
                     switch (fshType)
                     {
                     case DXT1:
-                            CompressFSHToolDXT1(reinterpret_cast<BYTE*>(outBuf), compressedData, dxtWidth, dxtWidth);
+                            CompressFSHToolDXT1(reinterpret_cast<BYTE*>(outBuf), compressedData, dxtWidth, dxtHeight);
                         break;
                     case DXT3:
-                            CompressFSHToolDXT3(reinterpret_cast<BYTE*>(outBuf), compressedData, dxtWidth, dxtWidth);
+                            CompressFSHToolDXT3(reinterpret_cast<BYTE*>(outBuf), compressedData, dxtWidth, dxtHeight);
                         break;
                     }
                 }
