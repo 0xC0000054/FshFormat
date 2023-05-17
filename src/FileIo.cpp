@@ -56,7 +56,7 @@ OSErr GetFileSize(HANDLE hFile, INT64* size)
     {
         return ioErr;
     }
-    
+
     *size = fileSize.QuadPart;
 
     return noErr;
@@ -77,7 +77,7 @@ OSErr ReadBytes(HANDLE hFile, void* buffPtr, const DWORD count)
         {
             return eofErr;
         }
-        
+
         return ioErr;
     }
 
@@ -94,7 +94,7 @@ OSErr ReadInt32(HANDLE hFile, INT32* val)
     {
         *val = static_cast<INT32>(((buf[3] << 24) | (buf[2] << 16) | (buf[1] << 8)) | buf[0]);
     }
-    
+
     return e;
 }
 
@@ -115,9 +115,9 @@ OSErr ReadUInt16(HANDLE hFile, UINT16* val)
 OSErr WriteBytes(HANDLE hFile, const void* buffPtr, const DWORD count)
 {
     DWORD bytesWritten = 0;
-    
+
     if (!WriteFile(hFile, buffPtr, count, &bytesWritten, nullptr))
-    {	
+    {
         return writErr;
     }
 
@@ -146,11 +146,11 @@ OSErr WriteInt32(HANDLE hFile, const INT32 val)
 OSErr WriteUInt16(HANDLE hFile, const UINT16 val)
 {
     BYTE buf[2];
-    
+
     buf[0] = static_cast<BYTE>(val);
     buf[1] = static_cast<BYTE>(val >> 8);
 
     OSErr e = WriteBytes(hFile, buf, 2);
-    
+
     return e;
 }
