@@ -103,7 +103,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\3rd-party\libsquish;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Pica_sp;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\General;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\3rd-party\libsquish;..\3rd-party\adobe_photoshop_sdk\pluginsdk\PhotoshopAPI\Pica_sp;..\3rd-party\adobe_photoshop_sdk\pluginsdk\PhotoshopAPI\General;..\3rd-party\adobe_photoshop_sdk\pluginsdk\PhotoshopAPI\Photoshop;..\3rd-party\adobe_photoshop_sdk\pluginsdk\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ISOLATION_AWARE_ENABLED=1;_DEBUG;WIN32=1;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -129,7 +129,8 @@
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32=1 MSWindows=1</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Dev_projects\Ps-6_sdk\PhotoshopAPI\Photoshop</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ResourceCompile>
     <PostBuildEvent>
       <Command>
@@ -143,7 +144,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\3rd-party\libsquish;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Pica_sp;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\General;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\3rd-party\libsquish;..\3rd-party\adobe_photoshop_sdk\pluginsdk\PhotoshopAPI\Pica_sp;..\3rd-party\adobe_photoshop_sdk\pluginsdk\PhotoshopAPI\General;..\3rd-party\adobe_photoshop_sdk\pluginsdk\PhotoshopAPI\Photoshop;..\3rd-party\adobe_photoshop_sdk\pluginsdk\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ISOLATION_AWARE_ENABLED=1;_DEBUG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;WIN32=1;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -162,7 +163,8 @@
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32=1 MSWindows=1 _WIN64</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ResourceCompile>
     <PostBuildEvent>
       <Command>copy "$(TargetPath)" "D:\Adobe CC Apps\Adobe Photoshop 2022\Plug-ins\File Formats" /y</Command>
@@ -176,8 +178,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\3rd-party\libsquish;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Pica_sp;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\General;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_WINDLL;MSWindows=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\3rd-party\libsquish;..\3rd-party\adobe_photoshop_sdk\pluginsdk\PhotoshopAPI\Pica_sp;..\3rd-party\adobe_photoshop_sdk\pluginsdk\PhotoshopAPI\General;..\3rd-party\adobe_photoshop_sdk\pluginsdk\PhotoshopAPI\Photoshop;..\3rd-party\adobe_photoshop_sdk\pluginsdk\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ISOLATION_AWARE_ENABLED=1;_WINDLL;MSWindows=1;WIN32=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -200,8 +202,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\3rd-party\libsquish;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Pica_sp;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\General;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_WINDLL;MSWindows=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\3rd-party\libsquish;..\3rd-party\adobe_photoshop_sdk\pluginsdk\PhotoshopAPI\Pica_sp;..\3rd-party\adobe_photoshop_sdk\pluginsdk\PhotoshopAPI\General;..\3rd-party\adobe_photoshop_sdk\pluginsdk\PhotoshopAPI\Photoshop;..\3rd-party\adobe_photoshop_sdk\pluginsdk\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ISOLATION_AWARE_ENABLED=1;_WINDLL;MSWindows=1;WIN32=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>false</GenerateDebugInformation>
