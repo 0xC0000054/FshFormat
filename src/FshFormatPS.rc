@@ -25,18 +25,18 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE
+1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE
+2 TEXTINCLUDE 
 BEGIN
     "#include ""afxres.h""\r\n"
     "\0"
 END
 
-3 TEXTINCLUDE
+3 TEXTINCLUDE 
 BEGIN
     "\r\n"
     "\0"
@@ -87,7 +87,7 @@ FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     LTEXT           "Electronic Arts® Fsh File Format  Version %s",ABOUTFORMAT,4,1,162,8
     LTEXT           "A plug-in image format module that reads and writes the Electronic Arts® Fsh format.",IDC_STATIC,4,34,143,22
-    LTEXT           "Copyright © 2022 Nicholas Hayes",ABOUTCOPYRIGHT,4,16,128,8
+    LTEXT           "Copyright © 2023 Nicholas Hayes",ABOUTCOPYRIGHT,4,16,128,8
     DEFPUSHBUTTON   "Ok",IDC_ABOUTOK,144,42,22,14,NOT WS_VISIBLE
 END
 
@@ -122,6 +122,18 @@ BEGIN
 END
 #endif    // APSTUDIO_INVOKED
 
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // String Table
@@ -134,6 +146,11 @@ BEGIN
     INVALIDMIPCOUNTFORMAT   "%d is not a valid number of mipmaps for the current image."
     TOOMANYMIPMAPS          "FSH images support a maximum of 15 mipmaps."
 END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
 
 #ifndef APSTUDIO_INVOKED
 // Use the APSTUDIO_INVOKED check to prevent the resource editor
@@ -162,7 +179,7 @@ BEGIN
             VALUE "FileDescription", "Electronic Arts(R) Fsh format plugin for Adobe(R) Photoshop(R)"
             VALUE "FileVersion", VERSION_STR
             VALUE "InternalName", "FshFormat.8bi"
-            VALUE "LegalCopyright", "Copyright (C) 2022 Nicholas Hayes"
+            VALUE "LegalCopyright", "Copyright (C) 2023 Nicholas Hayes"
             VALUE "OriginalFilename", "FshFormat.8bi"
             VALUE "ProductName", "FshFormat"
             VALUE "ProductVersion", VERSION_STR
@@ -174,6 +191,3 @@ BEGIN
     END
 END
 #endif
-
-#endif    // English (United States) resources
-/////////////////////////////////////////////////////////////////////////////
