@@ -235,7 +235,8 @@ OSErr DecompressFsh(FormatRecordPtr pb, HANDLE file)
         {
             if (size > INT_MAX)
             {
-                // Sanity check as the Photoshop Buffer suite uses a signed 32-bit integer for the memory amount.
+                // Ignore files that are larger than 2GB because the Photoshop Buffer suite uses
+                // a signed 32-bit integer for the memory amount.
                 e = memFullErr;
             }
 
