@@ -422,7 +422,7 @@ OSErr ShowErrorMessage(FormatRecordPtr pb, const UINT resourceId)
     wchar_t buffer[256];
     ZeroMemory(buffer, sizeof(buffer));
 
-    if (LoadStringW(reinterpret_cast<HINSTANCE>(hDllInstance), resourceId, buffer, _countof(buffer)) > 0)
+    if (LoadStringW(GetModuleInstanceHandle(), resourceId, buffer, _countof(buffer)) > 0)
     {
         PlatformData* platform = reinterpret_cast<PlatformData*>(pb->platformData);
 
@@ -441,7 +441,7 @@ OSErr ShowErrorMessageFormat(FormatRecordPtr pb, const UINT resourceId, ...)
     wchar_t format[256];
     ZeroMemory(format, sizeof(format));
 
-    if (LoadStringW(reinterpret_cast<HINSTANCE>(hDllInstance), resourceId, format, _countof(format)) > 0)
+    if (LoadStringW(GetModuleInstanceHandle(), resourceId, format, _countof(format)) > 0)
     {
         va_list args;
         va_start(args, resourceId);

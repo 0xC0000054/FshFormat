@@ -221,7 +221,6 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="DxtComp.cpp" />
     <ClCompile Include="Estimate.cpp" />
     <ClCompile Include="FileIo.cpp" />

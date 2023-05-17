@@ -119,7 +119,7 @@ void DoAbout (AboutRecordPtr about)
 {
     PlatformData* platform = reinterpret_cast<PlatformData*>(about->platformData);
 
-    DialogBoxParam(reinterpret_cast<HINSTANCE>(hDllInstance), MAKEINTRESOURCE(IDD_ABOUT), reinterpret_cast<HWND>(platform->hwnd), AboutDlgProc, 0);
+    DialogBoxParam(GetModuleInstanceHandle(), MAKEINTRESOURCE(IDD_ABOUT), reinterpret_cast<HWND>(platform->hwnd), AboutDlgProc, 0);
 }
 
 static void InitLoadDlg(HWND dp, const LoadDialogData* dialogData)
@@ -242,7 +242,7 @@ bool LoadFshDlg(FormatRecordPtr pb, const FshHeader& header, int* selectedIndex)
     data.imageCount = header.numBmps;
     data.selectedIndex = 0;
 
-    if (DialogBoxParamA(reinterpret_cast<HINSTANCE>(hDllInstance), MAKEINTRESOURCE(IDD_FSHLOAD), hWndParent, LoadDlgProc, reinterpret_cast<LPARAM>(&data)) == IDOK)
+    if (DialogBoxParamA(GetModuleInstanceHandle(), MAKEINTRESOURCE(IDD_FSHLOAD), hWndParent, LoadDlgProc, reinterpret_cast<LPARAM>(&data)) == IDOK)
     {
         *selectedIndex = data.selectedIndex;
 
@@ -525,7 +525,7 @@ bool SaveFshDlg(FormatRecordPtr pb, const Globals* globals, SaveDialogOptions* o
     dialogData.options.fshWriteCompression = globals->fshWriteCompression;
     dialogData.options.embedMipmaps = false;
 
-    if (DialogBoxParamA(reinterpret_cast<HINSTANCE>(hDllInstance), MAKEINTRESOURCE(FSHSAVEOPTIONS), hWndParent, SaveDlgProc, reinterpret_cast<LPARAM>(&dialogData)) == IDOK)
+    if (DialogBoxParamA(GetModuleInstanceHandle(), MAKEINTRESOURCE(FSHSAVEOPTIONS), hWndParent, SaveDlgProc, reinterpret_cast<LPARAM>(&dialogData)) == IDOK)
     {
         outputDialogOptions->fshType = dialogData.options.fshType;
         memcpy(outputDialogOptions->entryDirName, dialogData.options.entryDirName, 4);

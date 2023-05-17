@@ -30,4 +30,8 @@ OSErr ShowErrorMessage(FormatRecordPtr pb, const UINT resourceId);
 OSErr ShowErrorMessageFormat(FormatRecordPtr pb, const UINT resourceId, ...);
 bool CheckForRequiredSuites(FormatRecordPtr pb);
 
+// The linker provides this symbol, it represents the module instance handle.
+EXTERN_C IMAGE_DOS_HEADER __ImageBase;
+inline HINSTANCE GetModuleInstanceHandle() { return reinterpret_cast<HINSTANCE>(&__ImageBase); }
+
 #endif // !UTILITIES_H

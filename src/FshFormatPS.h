@@ -24,8 +24,6 @@
 
 #include "FshIo.h"
 
-extern HANDLE hDllInstance;
-
 struct RevertInfo
 {
 	FshBmpType fshCode;

@@ -33,9 +33,6 @@
     <ClCompile Include="FshFormatPS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="QFS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
