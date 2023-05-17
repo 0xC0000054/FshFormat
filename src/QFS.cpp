@@ -199,7 +199,7 @@ OSErr IsQFSCompressed(HANDLE hFile, LONG offset, bool* isCompressed)
             }
             else
             {
-                e = SetFilePosition(hFile, FILE_CURRENT, 4);
+                e = SetFilePosition(hFile, FILE_BEGIN, 4);
 
                 if (e == noErr)
                 {
