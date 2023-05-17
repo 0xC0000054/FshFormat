@@ -103,7 +103,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\vendor\squish-1.10;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Pica_sp;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\General;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\3rd-party\libsquish;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Pica_sp;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\General;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ISOLATION_AWARE_ENABLED=1;_DEBUG;WIN32=1;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -120,8 +120,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalDependencies>squishd.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\vendor\squish-1.10\vs7\squish\Debug;C:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Headers\Photoshop;C:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Headers\Photoshop\ADM;C:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Headers\Photoshop\AS;C:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Headers\Photoshop\PICA;C:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Headers\Photoshop\PS-Suites;C:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Headers\SDK;C:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Rez-files\Photoshop;C:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Rez-files\SDK;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>squish.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\3rd-party\libsquish\vs7\squish\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <IgnoreSpecificDefaultLibraries>
@@ -143,7 +143,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\vendor\squish-1.10;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Pica_sp;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\General;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\3rd-party\libsquish;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Pica_sp;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\General;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ISOLATION_AWARE_ENABLED=1;_DEBUG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;WIN32=1;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -156,9 +156,9 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <DataExecutionPrevention>true</DataExecutionPrevention>
-      <AdditionalLibraryDirectories>..\vendor\squish-1.10\vs7\squish\x64\Debug;C:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\common\includes</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\3rd-party\libsquish\vs7\squish\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalDependencies>squishd.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>squish.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32=1 MSWindows=1 _WIN64</PreprocessorDefinitions>
@@ -176,7 +176,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\vendor\squish-1.10;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Pica_sp;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\General;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\3rd-party\libsquish;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Pica_sp;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\General;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_WINDLL;MSWindows=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -184,7 +184,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalLibraryDirectories>..\vendor\squish-1.10\vs7\squish\Release;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Headers\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Headers\Photoshop\AS;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Headers\Photoshop\PICA;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Headers\Photoshop\PS-Suites;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Headers\SDK;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Rez-files\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\samplecode\Common\Rez-files\SDK;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\3rd-party\libsquish\vs7\squish\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
       <AdditionalDependencies>squish.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
@@ -200,14 +200,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\vendor\squish-1.10;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Pica_sp;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\General;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\3rd-party\libsquish;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Pica_sp;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\General;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\PhotoshopAPI\Photoshop;D:\Adobe_sdks\Adobe_Photoshop_CS4_SDK\SampleCode\Common\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_WINDLL;MSWindows=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalLibraryDirectories>..\vendor\squish-1.10\vs7\squish\x64\Release</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\3rd-party\libsquish\vs7\squish\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
       <AdditionalDependencies>squish.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
