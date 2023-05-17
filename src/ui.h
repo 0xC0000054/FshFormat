@@ -32,6 +32,10 @@ struct SaveDialogOptions
 	bool embedMipmaps;
 };
 
+// The linker provides this symbol, it represents the module instance handle.
+EXTERN_C IMAGE_DOS_HEADER __ImageBase;
+inline HINSTANCE GetModuleInstanceHandle() { return reinterpret_cast<HINSTANCE>(&__ImageBase); }
+
 bool LoadFshDlg(FormatRecordPtr pb, const FshHeader& header, int* selectedIndex);
 bool SaveFshDlg(FormatRecordPtr pb, const Globals* globals, SaveDialogOptions* params);
 
