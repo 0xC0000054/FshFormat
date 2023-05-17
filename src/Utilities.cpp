@@ -19,8 +19,10 @@
 *
 */
 
+#include "Utilities.h"
 #include "FshFormatPS.h"
 #include <PIChannelPortsSuite.h>
+#include <stdlib.h>
 #include <stdio.h>
 
 #define RequiredChannelPortsVersion 1

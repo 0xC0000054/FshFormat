@@ -19,15 +19,17 @@
 *
 */
 
-#include "FshFormatPS.h"
+#include "Common.h"
 #include "DxtComp.h"
+#include "FileIo.h"
+#include "FshFormatPS.h"
+#include "Utilities.h"
 #include <PIChannelPortsSuite.h>
 #include <new>
 #include "resource.h"
 #include "squish.h"
 
 BufferID inDataBuf;
-
 void* inDataPtr;
 
 static OSErr WriteImageDataImpl(FormatRecordPtr pb,

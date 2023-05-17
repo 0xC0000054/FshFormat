@@ -19,7 +19,8 @@
 *
 */
 
-#include "FshFormatPS.h"
+#include "Common.h"
+#include "FileIo.h"
 #include "QFS.h"
 #include "QFSHeader.h"
 

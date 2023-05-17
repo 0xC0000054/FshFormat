@@ -19,8 +19,8 @@
 *
 */
 
-#include "FshFormatPS.h"
 #include "QFSHeader.h"
+#include "FileIo.h"
 
 enum QFSHeaderFlags
 {

@@ -22,7 +22,7 @@
 #ifndef QFSHEADER_H
 #define QFSHEADER_H
 
-#include <Windows.h>
+#include "Common.h"
 
 class QFSHeader
 {

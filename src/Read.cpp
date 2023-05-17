@@ -20,10 +20,10 @@
 */
 
 #include "FshFormatPS.h"
+#include "FileIo.h"
 #include "QFS.h"
 #include "ui.h"
 #include "squish.h"
-
 
 BufferID outBufferID;
 void* outData = nullptr;

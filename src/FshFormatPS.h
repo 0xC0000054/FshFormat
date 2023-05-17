@@ -22,18 +22,7 @@
 #ifndef FSHFORMATPS_H
 #define FSHFORMATPS_H
 
-#pragma warning(push)
-#pragma warning(disable: 4121)
-
-#include "PIDefines.h"
-#include "PIFormat.h"
-#include "PIAbout.h"
-
-#pragma warning(pop)
-
-#include "FileIo.h"
 #include "FshIo.h"
-
 
 extern HANDLE hDllInstance;
 
@@ -92,13 +81,6 @@ OSErr DoWriteFinish(FormatRecordPtr pb);
 // Scripting
 Boolean ReadScriptParamsOnWrite(FormatRecordPtr pb, Globals* globals, OSErr* error);
 OSErr WriteScriptParamsOnWrite(FormatRecordPtr pb, const Globals* globals);
-
-// Utility functions
-bool ChannelPortsSuiteAvailable(FormatRecordPtr pb);
-bool DescriptorSuiteAvaliable(FormatRecordPtr pb);
-OSErr ShowErrorMessage(FormatRecordPtr pb, const UINT resourceId);
-OSErr ShowErrorMessageFormat(FormatRecordPtr pb, const UINT resourceId, ...);
-bool CheckForRequiredSuites(FormatRecordPtr pb);
 
 #define SETRECT(rect,l,t,r,b) ((rect).left=(l),(rect).top=(t),(rect).right=(r),(rect).bottom=(b))
 

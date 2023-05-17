@@ -19,17 +19,28 @@
 *
 */
 
-#ifndef QFS_H
-#define QFS_H
+#ifndef COMMON_H
+#define COMMON_H
 
-#include "Common.h"
+// Allow our OS includes to take precedence.
+#if WIN32
 
-OSErr QFSDecompress(const BYTE* inData, const DWORD inLength, BYTE* outData, const DWORD outLength);
-OSErr GetUncompressedSize(const BYTE* inData, const DWORD inLength, int* uncompressedSize);
-OSErr GetUncompressedSize(HANDLE hFile, LONG offset, int* uncompressedSize);
-OSErr IsQFSCompressed(HANDLE hFile, LONG offset, bool* isCompressed);
+#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
+#define NOMCX
+#define NOSERVICE
+#define NOHELP
 
-extern BufferID qfsBufferID;
-extern BYTE* qfsBuffer;
+#include <Windows.h>
 
-#endif
+#endif // WIN32
+
+#pragma warning(push)
+#pragma warning(disable: 4121)
+
+#include "PIDefines.h"
+#include "PIFormat.h"
+#include "PIAbout.h"
+
+#pragma warning(pop)
+
+#endif // !COMMON_H

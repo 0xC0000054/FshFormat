@@ -20,6 +20,7 @@
 */
 
 #include "FshFormatPS.h"
+#include "Utilities.h"
 
 static OSErr CreateGlobals(FormatRecordPtr pb, intptr_t* data)
 {

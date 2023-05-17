@@ -25,6 +25,7 @@
 #include <stdio.h>
 #include "resource.h"
 #include "ui.h"
+#include "Utilities.h"
 #include "version.h"
 
 struct LoadDialogData

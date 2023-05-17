@@ -21,6 +21,7 @@
 
 #include "FshFormatPS.h"
 #include "scripting.h"
+#include "Utilities.h"
 
 //-------------------------------------------------------------------------------
 //

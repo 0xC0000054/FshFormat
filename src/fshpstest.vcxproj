@@ -237,6 +237,7 @@
     <ClCompile Include="Write.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Common.h" />
     <ClInclude Include="DxtComp.h" />
     <ClInclude Include="FileIo.h" />
     <ClInclude Include="FshIo.h" />
@@ -246,6 +247,7 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="scripting.h" />
     <ClInclude Include="ui.h" />
+    <ClInclude Include="Utilities.h" />
     <ClInclude Include="version.h" />
   </ItemGroup>
   <ItemGroup>

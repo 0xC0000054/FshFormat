@@ -19,17 +19,15 @@
 *
 */
 
-#ifndef QFS_H
-#define QFS_H
+#ifndef UTILITIES_H
+#define UTILITIES_H
 
 #include "Common.h"
 
-OSErr QFSDecompress(const BYTE* inData, const DWORD inLength, BYTE* outData, const DWORD outLength);
-OSErr GetUncompressedSize(const BYTE* inData, const DWORD inLength, int* uncompressedSize);
-OSErr GetUncompressedSize(HANDLE hFile, LONG offset, int* uncompressedSize);
-OSErr IsQFSCompressed(HANDLE hFile, LONG offset, bool* isCompressed);
+bool ChannelPortsSuiteAvailable(FormatRecordPtr pb);
+bool DescriptorSuiteAvaliable(FormatRecordPtr pb);
+OSErr ShowErrorMessage(FormatRecordPtr pb, const UINT resourceId);
+OSErr ShowErrorMessageFormat(FormatRecordPtr pb, const UINT resourceId, ...);
+bool CheckForRequiredSuites(FormatRecordPtr pb);
 
-extern BufferID qfsBufferID;
-extern BYTE* qfsBuffer;
-
-#endif
+#endif // !UTILITIES_H
