@@ -35,4 +35,7 @@ struct SaveDialogOptions
 bool LoadFshDlg(FormatRecordPtr pb, const FshHeader& header, int* selectedIndex);
 bool SaveFshDlg(FormatRecordPtr pb, const Globals* globals, SaveDialogOptions* params);
 
+OSErr ShowErrorMessage(FormatRecordPtr pb, const UINT resourceId);
+OSErr ShowErrorMessageFormat(FormatRecordPtr pb, const UINT resourceId, ...);
+
 #endif

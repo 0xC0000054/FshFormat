@@ -24,6 +24,7 @@
 #include "FileIo.h"
 #include "FshFormatPS.h"
 #include "Utilities.h"
+#include "ui.h"
 #include <PIChannelPortsSuite.h>
 #include <new>
 #include "resource.h"

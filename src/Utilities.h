@@ -26,8 +26,6 @@
 
 bool ChannelPortsSuiteAvailable(FormatRecordPtr pb);
 bool DescriptorSuiteAvaliable(FormatRecordPtr pb);
-OSErr ShowErrorMessage(FormatRecordPtr pb, const UINT resourceId);
-OSErr ShowErrorMessageFormat(FormatRecordPtr pb, const UINT resourceId, ...);
 bool CheckForRequiredSuites(FormatRecordPtr pb);
 
 // The linker provides this symbol, it represents the module instance handle.

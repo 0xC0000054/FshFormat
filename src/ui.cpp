@@ -537,3 +537,52 @@ bool SaveFshDlg(FormatRecordPtr pb, const Globals* globals, SaveDialogOptions* o
 
     return false;
 }
+
+OSErr ShowErrorMessage(FormatRecordPtr pb, const UINT resourceId)
+{
+    wchar_t buffer[256];
+    ZeroMemory(buffer, sizeof(buffer));
+
+    if (LoadStringW(GetModuleInstanceHandle(), resourceId, buffer, _countof(buffer)) > 0)
+    {
+        PlatformData* platform = reinterpret_cast<PlatformData*>(pb->platformData);
+
+        if (MessageBoxW(reinterpret_cast<HWND>(platform->hwnd), buffer, L"Fsh Format", MB_OK | MB_ICONERROR | MB_DEFBUTTON1 | MB_APPLMODAL) == IDOK)
+        {
+            // Any positive integer is a plugin handled error.
+            return 1;
+        }
+    }
+
+    return formatBadParameters;
+}
+
+OSErr ShowErrorMessageFormat(FormatRecordPtr pb, const UINT resourceId, ...)
+{
+    wchar_t format[256];
+    ZeroMemory(format, sizeof(format));
+
+    if (LoadStringW(GetModuleInstanceHandle(), resourceId, format, _countof(format)) > 0)
+    {
+        va_list args;
+        va_start(args, resourceId);
+
+        wchar_t buffer[256];
+        int retVal = _vsnwprintf_s(buffer, _countof(buffer), format, args);
+
+        va_end(args);
+
+        if (retVal > 0)
+        {
+            PlatformData* platform = reinterpret_cast<PlatformData*>(pb->platformData);
+
+            if (MessageBoxW(reinterpret_cast<HWND>(platform->hwnd), buffer, L"Fsh Format", MB_OK | MB_ICONERROR | MB_DEFBUTTON1 | MB_APPLMODAL) == IDOK)
+            {
+                // Any positive integer is a plugin handled error.
+                return 1;
+            }
+        }
+    }
+
+    return formatBadParameters;
+}
